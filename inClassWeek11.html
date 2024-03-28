@@ -20,21 +20,35 @@
 		// All of the steps below must be achieved using JavaScript!
 
 		// 1. Change the h1 element to your name.
-		document.querySelector("h1").textContent = "Amna";
+		document.querySelector("h1").innerHTML = "Amna";
 		// 2. Update the three span elements using ONLY JavaScript
-		
+		document.querySelector("#URL").innerHTML = window.location.href;
+		var listItems = doscument.querySelectorAll("li").length;
+		document.querySelector("#time").innerHTML = new Date()
     }
-
+		
+	let counter = 0;
 	function stylePage () {
 
 		// 3. Change the background color and margin for the entire page.
-
+		document.body.style.backgroundColor = "lightblue"; // Change the color to your choice
+        document.body.style.margin = "50px";
 	}
 
     // 4. If someone uses the keyboard shortcut to copy the words "University of Michigan" then add the words "Go Blue" to the final div.  
     //    Each occurence should be on a separate line.  Don't use paragraphs. 
 	function copyFunction(){
+		document.querySelector("#cheer").innerHTML += "<span>GoBlue!</span><br/>";
 
+		counter = counter+1;
+
+		if(counter%2==1){
+			document.querySelector("#cheer span:last-of-type").style.color = "blue";
+		}
+		else{
+			document.querySelector("#cheer span:last-of-type").style.color = "yellow";
+		
+		}
 	}
 
 	
